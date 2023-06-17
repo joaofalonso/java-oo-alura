@@ -28,7 +28,9 @@ public class Challenge {
         String accountStatemnts = "Bank Statement";
         int option = 0;
         while(option != 4){
+            System.out.println("--------------------------------------------");
             System.out.println(menu);
+
             option = scanner.nextInt();
 
             switch (option){
@@ -72,13 +74,16 @@ public class Challenge {
                                     """.formatted(clientName, balance, accountStatemnts);
 
                     }else{
-                        System.out.println("The current value in your account is lower the value to withdraw.");
+                        System.out.println("The current value in your account is lower than the value you want to to withdraw.");
                     }
                     break;
 
                 case 4:
 
 
+                    break;
+                default:
+                    System.out.println("Invalid option!");
                     break;
             }
         }
