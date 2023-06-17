@@ -14,7 +14,6 @@ public class Challenge {
                 """;
         String clientName = "";
         double balance = 0.0;
-        boolean run = true;
         System.out.println("Please insert the name of the account owner:");
         clientName = scanner.nextLine();
         System.out.println("Insert the start amount:");
@@ -27,9 +26,10 @@ public class Challenge {
                 """.formatted(clientName, balance);
         System.out.println(accountData);
         String accountStatemnts = "Bank Statement";
-        while(run){
+        int option = 0;
+        while(option != 4){
             System.out.println(menu);
-            int option = scanner.nextInt();
+            option = scanner.nextInt();  
 
             switch (option){
                 case 1:
@@ -78,11 +78,12 @@ public class Challenge {
                     break;
 
                 case 4:
-                    System.out.println("Closing the application");
-                    run = false;
+
+
                     break;
             }
         }
+        System.out.println("Closing the application");
         scanner.close();
 
     }
