@@ -29,7 +29,7 @@ public class Challenge {
         int option = 0;
         while(option != 4){
             System.out.println(menu);
-            option = scanner.nextInt();  
+            option = scanner.nextInt();
 
             switch (option){
                 case 1:
@@ -58,9 +58,8 @@ public class Challenge {
                     description = scanner.next();
                     System.out.println("Insert the amount to deposit");
                     amount = scanner.nextDouble();
-                    double result = balance - amount;
 
-                    if(result >= 0)
+                    if(balance >= amount)
                     {
                         balance -= amount;
                         accountStatemnts += "\n"+ description + " : -" + amount;
